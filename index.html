@@ -1,0 +1,688 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Anonymous TTS Demo</title>
+
+  <!-- Bootstrap -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  >
+</head>
+
+<body style="background-color:#f5f5f5;">
+
+<div class="container pt-5 mt-5 shadow-lg p-5 mb-5 bg-white rounded">
+
+  <h2 id="zero-shot-TTS-samples" style="text-align: center;">
+    Zero-Shot TTS Samples on speed-mismatch Scenario
+  </h2>
+
+  <div class="table-responsive pt-3">
+
+    <table
+      class="table table-hover pt-2"
+      style="table-layout: fixed; width:100%;"
+    >
+
+      <thead>
+        <tr>
+          <th style="vertical-align: middle; text-align: center;">
+            Reference
+          </th>
+
+          <th style="vertical-align: middle; text-align: center;">
+            CosyVoice2
+          </th>
+
+          <th style="vertical-align: middle; text-align: center;">
+            PLC w/o LCDA
+          </th>
+
+          <th style="vertical-align: middle; text-align: center;">
+            PLC w/ LCDA
+          </th>
+
+          <th style="vertical-align: middle; text-align: center;">
+            Ground-Truth
+          </th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <!-- Sample 1 -->
+        <tr>
+            <td colspan="5" style="padding-top:20px; padding-bottom:10px;">
+
+                <strong>[Slow Reference]</strong>
+                We came, we saw, we uh kicked butt!
+
+                <br>
+
+                <strong>[Fast Target]</strong>
+                Do we have to listen to an instructional talk about family values?
+                
+                <br>
+                
+                <strong>Target Length</strong> 3.89 sec
+            </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex01_confused_00052.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/cosyvoice2/ex01_confused_00052-ex03_default_emphasis_00058.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/PLC_wo_LCDA/ex01_confused_00052-ex03_default_emphasis_00058.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/PLC_w_LCDA/ex01_confused_00052-ex03_default_emphasis_00058.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex03_default_emphasis_00058.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+        </tr>
+        
+        <tr>
+            <td colspan="5" style="padding-top:20px; padding-bottom:10px;">
+
+                <strong>[Fast Reference]</strong>
+                So you were suffocating and he had to administer mouth to mouth?
+
+                <br>
+
+                <strong>[Slow Target]</strong>
+                There's an alarm tomorrow at twelve fifteen AM, Friday at nine AM, and one next Saturday at eight PM.
+                
+                <br>
+                
+                <strong>Target Length</strong> 12.07 sec
+            </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex04_laughing_00154.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/cosyvoice2/ex04_laughing_00154-ex02_enunciated_00001.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/PLC_wo_LCDA/ex04_laughing_00154-ex02_enunciated_00001.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/PLC_w_LCDA/ex04_laughing_00154-ex02_enunciated_00001.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex02_enunciated_00001.wav" type="audio/wav">
+            </audio>
+          </td>
+
+        </tr>
+
+        <tr>
+            <td colspan="5" style="padding-top:20px; padding-bottom:10px;">
+
+                <strong>[Fast Reference]</strong>
+                Do we have to listen to an instructional talk about family values?
+
+                <br>
+
+                <strong>[Slow Target]</strong>
+                Oh, golly, gee, whiz, what will they think of me?
+                
+                <br>
+                
+                <strong>Target Length</strong> 6.07 sec
+            </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex03_default_emphasis_00058.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/cosyvoice2/ex03_default_emphasis_00058-ex03_sad_00182.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/PLC_wo_LCDA/ex03_default_emphasis_00058-ex03_sad_00182.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/PLC_w_LCDA/ex03_default_emphasis_00058-ex03_sad_00182.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex03_sad_00182.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="5" style="padding-top:20px; padding-bottom:10px;">
+
+                <strong>[Slow Reference]</strong>
+                Mm. Decent or indecent?
+
+                <br>
+
+                <strong>[Fast Target]</strong>
+                two minutes ago, you were jazzed about Pepperdine, talking about dolphins.
+                
+                <br>
+                
+                <strong>Target Length</strong> 3.89 sec
+            </td>
+        </tr>
+        <tr>
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex03_laughing_00002.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/cosyvoice2/ex03_laughing_00002-ex04_default_emphasis_00162.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/PLC_wo_LCDA/ex03_laughing_00002-ex04_default_emphasis_00162.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/PLC_w_LCDA/ex03_laughing_00002-ex04_default_emphasis_00162.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex04_default_emphasis_00162.wav" type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  <h2 id="zero-shot-TTS-samples" style="text-align: center;">
+    Zero-Shot TTS Samples on various speed conditions
+  </h2>
+
+  <div class="table-responsive pt-3">
+
+    <table
+      class="table table-hover pt-2"
+      style="table-layout: fixed; width:100%;"
+    >
+    <tr>
+        <th style="vertical-align: middle; text-align:center;">Models</th>
+        <th style="vertical-align: middle; text-align:center;">Reference</th>
+        <th style="vertical-align: middle; text-align:center;">GT Speed x 0.75</th>
+        <th style="vertical-align: middle; text-align:center;">GT Speed x 0.875</th>
+        <th style="vertical-align: middle; text-align:center;">GT Speed x 1.0</th>
+        <th style="vertical-align: middle; text-align:center;">GT Speed x 1.125</th>
+        <th style="vertical-align: middle; text-align:center;">GT Speed x 1.25</th>
+    </tr>
+
+      <tbody>
+        <tr>
+            <td colspan="5" style="padding-top:20px; padding-bottom:10px;">
+                <strong>[Slow Reference]</strong>
+                The McDonald family sends out our sincere condolences.
+
+                <br>
+
+                <strong>[Fast Target]</strong>
+                I suggest the Witching Hour if you are in the mood for fantasy!
+            </td>
+        </tr>
+
+        <tr>
+        <td style="vertical-align: middle; text-align:center;"><strong>CosyVoice2</strong></td>
+          <td style="vertical-align: middle; text-align:center;">
+            
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex01_confused_00052.wav" type="audio/wav">
+            </audio> 
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_0_75/ex02_default_emphasis_00040-ex02_happy_00317.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_0_875/ex02_default_emphasis_00040-ex02_happy_00317.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_1_0/ex02_default_emphasis_00040-ex02_happy_00317.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_1_125/ex02_default_emphasis_00040-ex02_happy_00317.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_1_25/ex02_default_emphasis_00040-ex02_happy_00317.wav"  type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+        <td style="vertical-align: middle; text-align:center;"><strong>PLC w/o LCDA</strong></td>
+          <td style="vertical-align: middle; text-align:center;">
+            
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex01_confused_00052.wav" type="audio/wav">
+            </audio> 
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_0_75/ex02_default_emphasis_00040-ex02_happy_00317.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_0_875/ex02_default_emphasis_00040-ex02_happy_00317.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_1_0/ex02_default_emphasis_00040-ex02_happy_00317.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_1_125/ex02_default_emphasis_00040-ex02_happy_00317.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_1_25/ex02_default_emphasis_00040-ex02_happy_00317.wav"  type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+        <td style="vertical-align: middle; text-align:center;"><strong>PLC w/ LCDA</strong></td>
+          <td style="vertical-align: middle; text-align:center;">
+            
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex01_confused_00052.wav" type="audio/wav">
+            </audio> 
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_0_75/ex02_default_emphasis_00040-ex02_happy_00317.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_0_875/ex02_default_emphasis_00040-ex02_happy_00317.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_1_0/ex02_default_emphasis_00040-ex02_happy_00317.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_1_125/ex02_default_emphasis_00040-ex02_happy_00317.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_1_25/ex02_default_emphasis_00040-ex02_happy_00317.wav"  type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        
+      </tbody>
+
+      <tbody>
+        <tr>
+            <td colspan="5" style="padding-top:20px; padding-bottom:10px;">
+                <strong>[Slow Reference]</strong>
+                I suggest the Witching Hour if you are in the mood for fantasy!
+
+                <br>
+
+                <strong>[Fast Target]</strong>
+                What room has no walls? A mushroom!
+            </td>
+        </tr>
+
+        <tr>
+        <td style="vertical-align: middle; text-align:center;"><strong>CosyVoice2</strong></td>
+          <td style="vertical-align: middle; text-align:center;">
+            
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex02_happy_00317.wav" type="audio/wav">
+            </audio> 
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_0_75/ex02_happy_00317-ex04_laughing_00360.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_0_875/ex02_happy_00317-ex04_laughing_00360.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_1_0/ex02_happy_00317-ex04_laughing_00360.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_1_125/ex02_happy_00317-ex04_laughing_00360.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_1_25/ex02_happy_00317-ex04_laughing_00360.wav"  type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+        <td style="vertical-align: middle; text-align:center;"><strong>PLC w/o LCDA</strong></td>
+          <td style="vertical-align: middle; text-align:center;">
+            
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex02_happy_00317.wav" type="audio/wav">
+            </audio> 
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_0_75/ex02_happy_00317-ex04_laughing_00360.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_0_875/ex02_happy_00317-ex04_laughing_00360.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_1_0/ex02_happy_00317-ex04_laughing_00360.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_1_125/ex02_happy_00317-ex04_laughing_00360.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_1_25/ex02_happy_00317-ex04_laughing_00360.wav"  type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+        <td style="vertical-align: middle; text-align:center;"><strong>PLC w/ LCDA</strong></td>
+          <td style="vertical-align: middle; text-align:center;">
+            
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex02_happy_00317.wav" type="audio/wav">
+            </audio> 
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_0_75/ex02_happy_00317-ex04_laughing_00360.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_0_875/ex02_happy_00317-ex04_laughing_00360.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_1_0/ex02_happy_00317-ex04_laughing_00360.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_1_125/ex02_happy_00317-ex04_laughing_00360.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_1_25/ex02_happy_00317-ex04_laughing_00360.wav"  type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+        
+      </tbody>
+
+      <tbody>
+        <tr>
+            <td colspan="5" style="padding-top:20px; padding-bottom:10px;">
+                <strong>[Slow Reference]</strong>
+                Go get your swimsuits.
+
+                <br>
+
+                <strong>[Fast Target]</strong>
+                There's an alarm tomorrow at twelve fifteen AM, Friday at nine AM, and one next Saturday at eight PM.
+            </td>
+        </tr>
+
+        <tr>
+        <td style="vertical-align: middle; text-align:center;"><strong>CosyVoice2</strong></td>
+          <td style="vertical-align: middle; text-align:center;">
+            
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex03_confused_00012.wav" type="audio/wav">
+            </audio> 
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_0_75/ex03_confused_00012-ex02_enunciated_00001.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_0_875/ex03_confused_00012-ex02_enunciated_00001.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_1_0/ex03_confused_00012-ex02_enunciated_00001.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_1_125/ex03_confused_00012-ex02_enunciated_00001.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/cosyvoice2/speed_1_25/ex03_confused_00012-ex02_enunciated_00001.wav"  type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+        <td style="vertical-align: middle; text-align:center;"><strong>PLC w/o LCDA</strong></td>
+          <td style="vertical-align: middle; text-align:center;">
+            
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex03_confused_00012.wav" type="audio/wav">
+            </audio> 
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_0_75/ex03_confused_00012-ex02_enunciated_00001.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_0_875/ex03_confused_00012-ex02_enunciated_00001.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_1_0/ex03_confused_00012-ex02_enunciated_00001.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_1_125/ex03_confused_00012-ex02_enunciated_00001.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_wo_LCDA/speed_1_25/ex03_confused_00012-ex02_enunciated_00001.wav"  type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+        <tr>
+        <td style="vertical-align: middle; text-align:center;"><strong>PLC w/ LCDA</strong></td>
+          <td style="vertical-align: middle; text-align:center;">
+            
+            <audio controls style="width:150px;">
+              <source src="./expresso/ex03_confused_00012.wav" type="audio/wav">
+            </audio> 
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_0_75/ex03_confused_00012-ex02_enunciated_00001.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_0_875/ex03_confused_00012-ex02_enunciated_00001.wav" type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_1_0/ex03_confused_00012-ex02_enunciated_00001.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_1_125/ex03_confused_00012-ex02_enunciated_00001.wav"  type="audio/wav">
+            </audio>
+          </td>
+
+          <td style="vertical-align: middle; text-align:center;">
+            <audio controls style="width:150px;">
+              <source src="./emnlp_demo/various_speed_samples/PLC_w_LCDA/speed_1_25/ex03_confused_00012-ex02_enunciated_00001.wav"  type="audio/wav">
+            </audio>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div> 
+
+
+</body>
+</html>
